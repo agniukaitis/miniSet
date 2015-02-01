@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'/>
+    <title>miniSet Demo</title>
+    <link rel='stylesheet' type='text/css' href='css/miniset.css'/>
+</head>
+<body>
+
+    <h2 id="lightbox_example">Lightbox</h2>
+    <p>
+        Click on an image to open the Lightbox. Click anywhere or press ESC to close it.
+    </p>
+    <div class="ms-lightbox-group">
+        <img src='img/landscape_1.jpg' class="ms-lightbox" width="30%" height="159" title="Landscape 1">
+        <img src='img/landscape_2.jpg' class="ms-lightbox" width="30%" height="159" title="Landscape 2">
+        <img src='img/landscape_3.jpg' class="ms-lightbox" width="30%" height="159" title="Landscape 3">
+    </div>
+
+    <hr>
+
+    <h2 id="slider_example">Slider</h2>
+    <p>
+        Click on the bullet points under the Slider to change the image or wait a moment for the image to change by itself
+    </p>
+    <div class="ms-slider-group">
+        <ul id="ms-slider">
+            <li><img src="img/landscape_1_wide.jpg"></li>
+            <li><img src="img/landscape_2_wide.jpg"></li>
+            <li><img src="img/landscape_3_wide.jpg"></li>
+            <li><img src="img/landscape_4_wide.jpg"></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2 id="gallery_example">Gallery</h2>
+    <p>
+        Click one of the Gallery images to enlarge it and navigate through the Gallery by clicking on left or right arrows
+    </p>
+    <div class='ms-gallery-group'>
+        <ul id="ms-gallery">
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+            <li><img src="img/landscape_1.jpg" title="Landscape 1"></li>
+        </ul>
+    </div>
+
+    <script src='http://localhost/2014HT/BTH/miniStage/webroot/js/jquery.js'></script>
+    <script src='http://localhost/2014HT/BTH/miniStage/webroot/js/miniSet.js'></script>
+    <script >
+        $( document ).ready(function() {
+            // Initiate the Slider
+            $('#ms-slider').showSlider({
+                'height': 300,
+                'fadeTime': 500,
+                'intervalTime': 5000,
+                'tray': true
+            });
+
+            // Initiate the Gallery
+            $('#ms-gallery').showGallery({
+                'imgCounter': true,
+                'width': 165,
+                'height': 95
+            });
+        });
+    </script>
+</body>
+</html>
